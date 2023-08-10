@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 3</title>
+    <script src="example.js"></script>
+</head>
+
+<body>
+
+    <!-- Head----------------------------- -->
+    <header id="head" class="container text-center p-2">
+        <h1>Learning about events!</h1>
+    </header>
+
+    <!-- Main----------------------------- -->
+    <main class="container-fluid" id="container">
+
+        <div class="column row justify-content-center">
+            <img class="reel col-3" id="reel1" onclick="randomize(this)">
+        </div>
+
+        <div class="column row justify-content-center">
+            <img class="reel col-3" id="reel2" onclick="randomize(this)">
+        </div>
+
+        <div class="column row justify-content-center">
+            <img class="reel col-3" id="reel3" onclick="randomize(this)">
+        </div>
+
+        <div class="row justify-content-center p-2">
+        </div>
+
+    </main>
+
+    <!-- Footer----------------------------- -->
+    <footer class="container-fluid text-center">
+
+
+                <div class="first">
+                    <div class="col-6 text-end">
+                        <label for="timeOut" class="form-label">Timeout</label>
+                        <span>(500-10000ms)</span>
+                    </div>
+                    <div class="col-6 text-start">
+                        <div class="col-4">
+                          <!---- // this.valu we use to passs the value of text box-->
+                            <input class="form-control" onchange="change_interval(this.value)" name="timeOut" id="timeOut" 
+                                type="number" min="500" max="10000" value="2500">
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="middle">
+                    <div>
+                        <button class="btn btn-info btn-outline-info text-black col-3" onclick="randomize()">Randomize</button>
+                    </div>
+
+                    <div id="timer-col" class="col-12">
+                        <div>
+                            Time untill automatic refresh: <span id="clock"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="last">
+                    <div id="counter-col" class="col-12">
+                        Image has updated <span id="counter">0</span> times.
+                    </div>
+                </div>
+    </footer>
+
+</body>
+
+</html>
